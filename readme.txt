@@ -1,0 +1,56 @@
+=== Post from AWeber ===
+Contributors: davidfcarr
+Donate: http://www.rsvpmaker.com
+Tags: email, AWeber
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP: 5.6
+Requires at least: 5.0
+Tested up to: 5.4.2
+Stable tag: 0.9
+
+Create a blog post based on the archive page for an AWeber email broadcast.
+
+== Description ==
+
+If you create valuable content in your AWeber email newsletters or other email broadcasts, this plugin simplifies the process of republishing that content to your blog.
+
+Just paste the url for the AWeber archive page into the AWeber Post screen (a submenu under Posts) and click Get.
+
+The content import process strips out extraneous HTML such as table coding. 
+
+Allows you to edit the results in the WordPress editor. 
+
+Appears as a Classic Block in the Gutenberg editor, but you can "convert to blocks" if desired.
+
+Problem it solves: copy-and-paste from an AWeber archive page into the WordPress editor does not work well, and manually editing the HTML code is difficult because of the use of nested tables for formatting.
+
+This plugin is for AWeber users, but the company behind that service is not responsible for any issues with this code.
+
+== Installation ==
+
+1. Upload the entire `post-from-aweber` folder to the `/wp-content/plugins/` directory.
+1. Activate the plugin through the 'Plugins' menu in WordPress.
+1. Look for AWeber Post as a submenu under the Posts menu.
+
+== Credits ==
+
+    Copyright (C) 2010-2019 David F. Carr
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    See the GNU General Public License at <http://www.gnu.org/licenses/gpl-2.0.html>.
+
+== Changelog ==
+
+= 0.9 =
+
+* Initial release
