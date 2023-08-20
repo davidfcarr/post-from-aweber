@@ -6,8 +6,8 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 5.6
 Requires at least: 5.0
-Tested up to: 5.4.2
-Stable tag: 0.9
+Tested up to: 5.8.1
+Stable tag: 1.2
 
 Create a blog post based on the archive page for an AWeber email broadcast.
 
@@ -26,6 +26,8 @@ Appears as a Classic Block in the Gutenberg editor, but you can "convert to bloc
 Problem it solves: copy-and-paste from an AWeber archive page into the WordPress editor does not work well, and manually editing the HTML code is difficult because of the use of nested tables for formatting.
 
 This plugin is for AWeber users, but the company behind that service is not responsible for any issues with this code.
+
+[Github https://github.com/davidfcarr/post-from-aweber](https://github.com/davidfcarr/post-from-aweber)
 
 == Installation ==
 
@@ -50,6 +52,10 @@ This plugin is for AWeber users, but the company behind that service is not resp
     See the GNU General Public License at <http://www.gnu.org/licenses/gpl-2.0.html>.
 
 == Changelog ==
+
+= 1.1 =
+
+* Updated screen scraping code
 
 = 0.9 =
 
