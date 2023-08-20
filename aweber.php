@@ -1,10 +1,11 @@
 <?php
 /*
 Plugin Name: Post from AWeber
+Plugin URI: https://github.com/davidfcarr/post-from-aweber
 Description: Create a blog post based on the archive page for an AWeber email broadcast. Strips out extraneous HTML such as table coding. Allows you to edit the results in the WordPress editor. Appears as a Classic Block in the Gutenberg editor, but you can "convert to blocks" if desired.
 Author: David F. Carr
 Author URI: http://www.carrcommunications.com
-Version: 0.9
+Version: 1.2
 */
 
 function post_from_aweber_fetch () {
@@ -17,14 +18,12 @@ if(wp_verify_nonce($_POST['_wpnonce'],'post_from_aweber') && current_user_can('e
         echo '<div class="notice notice-info"><p>Security check: OK</p></div>';
 
         $content = file_get_contents(esc_url_raw($_POST['archive']));
-        preg_match('/<title>(.+)<\/title>/',$content,$matches);
+        preg_match('/<h2.+>(.+)<\/h2>/',$content,$matches);
         $title = $matches[1];
-        $parts = explode(' - ',$title);
-        $title = $parts[1];
-        $parts = explode('<div class="aweber_message_body">',$content);
-        $content = '<div>'.$parts[1];
-        $parts = explode('<div class="aweber_footer">',$content);
-        $content = $parts[0];
+
+        $parts = explode('</section>',$content);
+        array_shift($parts);
+        $content = implode('',$parts);
         $content = str_replace('align="center"','',$content);
         $content = strip_tags($content,'<p><a><img><ol><ul><li><div>');
         $content = wp_kses_post($content);
